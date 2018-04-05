@@ -11,5 +11,5 @@ Tiles setup with Mapbox and Bing account.
 Deploy to S3 with:
 
 ```
-aws s3 sync ./ s3://static.startribune.com/news/tools/locator --exclude=node_modules/*
+aws s3 sync ./ s3://static.startribune.com/news/tools/locator --exclude="node_modules/*" --exclude=".git/*"
 ```
