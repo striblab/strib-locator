@@ -1,0 +1,140 @@
+
+
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Your Locator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://rawgit.com/datanews/locator/master/dist/locator.bundled.min.css">
+  </head>
+  <body>
+    <div class="locator-container"></div>
+
+    <script src="https://rawgit.com/datanews/locator/master/dist/locator.bundled.min.js"></script>
+
+    <script type="text/javascript">
+      // Create locator here
+      var l = new window.Locator({
+        el: '.locator-container',
+        title: 'Star Tribune Locator',
+        footer: 'Locator only works in Google Chrome.  If you need help please contact alan.palazzolo@startribune.com.',
+
+        lat: 44.975592,
+        lng: -93.268187,
+
+        // Markers
+        markers: [{
+          text: 'The Star Tribune',
+          lat: 44.975592,
+          lng: -93.268187,
+          background: 'rgba(0, 130, 74, 0.9)'
+        }],
+
+        // Marker option sets
+        markerBackgrounds: [
+          'rgba(0, 0, 0, 0.9)',
+          'rgba(255, 255, 255, 0.9)',
+          'rgba(0, 130, 74, 0.9)',
+          'rgba(141, 198, 63, 0.9)',
+          'rgba(0, 51, 102, 0.9)',
+          'rgba(122, 189, 255, 0.9)',
+          'rgba(255, 252, 25, 0.9)',
+          'rgba(204, 201, 0, 0.9)',
+          'rgba(157, 93, 0, 0.9)',
+          'rgba(158, 0, 63, 0.9)'
+        ],
+
+        // Drawing
+        drawingStrokes: [
+          '#000000',
+          '#FFFFFF',
+          '#005825',
+          '#00824a',
+          '#8dc63f',
+          '#003366',
+          '#7ABDFF',
+          '#fffc19',
+          '#CCC900',
+          '#9d5d00',
+          '#9e003f'
+        ],
+        drawingFills: [
+          '#000000',
+          '#FFFFFF',
+          '#005825',
+          '#00824a',
+          '#8dc63f',
+          '#003366',
+          '#7ABDFF',
+          '#fffc19',
+          '#CCC900',
+          '#9d5d00',
+          '#9e003f'
+        ],
+
+        // Main map
+        tilesets: {
+          // "CartoDB Positron": {
+          //   url: "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+          //   attribution: "&copy; <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, &copy; <a target=\"_blank\" href=\"http://cartodb.com/attributions\">CartoDB</a>"
+          // },
+          // "CartoDB Positron Dark": {
+          //   url: "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+          //   attribution: "&copy; <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, &copy; <a target=\"_blank\" href=\"http://cartodb.com/attributions\">CartoDB</a>"
+          // },
+          "Mapbox Light v9 (via Strib)": {
+            url: "https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA",
+            attribution: "&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+          },
+          "Mapbox Dark v9 (via Strib)": {
+            url: "https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA",
+            attribution: "&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+          },
+          "Stamen Toner": {
+            url: "http://tile.stamen.com/toner/{z}/{x}/{y}.png",
+            attribution: "Map tiles by <a target=\"_blank\" href=\"http://stamen.com\">Stamen Design</a>, under <a  target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>. Data by <a  target=\"_blank\" href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+          },
+          "Mapbox Streets v9 (via Strib)": {
+            url: "https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA",
+            attribution: "&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+          },
+          "Mapbox Outdoor v9 (via WNYC)": {
+            url: "https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA",
+            attribution: "&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>; &copy; <a target='_blank' href='https://www.digitalglobe.com/'>DigitalGlobe</a>"
+          },
+          "Mapbox Satellite Streets v9 (via WNYC)": {
+            url: "https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA",
+            attribution: "&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>; &copy; <a target='_blank' href='https://www.digitalglobe.com/'>DigitalGlobe</a>"
+          },
+
+          "Bing Maps Ariel (via WNYC)": {
+            type: "BingLayer",
+            // Don't steal, OK
+            key: "Ajo35VYmmiRLTOWaEC016QWfYkDmiwO4AQqrcfP90vBXjhgAICQuQmFEksq_5F4a",
+            options: {
+              type: "Aerial",
+            },
+            attribution: "&copy; Bing",
+            preview: "https://ecn.t2.tiles.virtualearth.net/tiles/a0320101103.jpeg?g=5306"
+          },
+          "Bing Maps Aerial w/ Labels (via WNYC)": {
+            type: "BingLayer",
+            key: "Ajo35VYmmiRLTOWaEC016QWfYkDmiwO4AQqrcfP90vBXjhgAICQuQmFEksq_5F4a",
+            options: {
+              type: "AerialWithLabels",
+            },
+            attribution: "&copy; Bing",
+            preview: "https://ecn.t2.tiles.virtualearth.net/tiles/h0320101103.jpeg?g=5306&mkt="
+          },
+
+          // Example of just url
+          //"Stamen Toner": "http://tile.stamen.com/toner/{z}/{x}/{y}.png"
+        },
+        tileset: "Mapbox Light v9 (via Strib)",
+      });
+    </script>
+  </body>
+</html>
